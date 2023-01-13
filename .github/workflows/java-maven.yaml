@@ -41,10 +41,10 @@ jobs:
          # file: ./Dockerfile
          # push: true
          # tags: ${{ secrets.DOCKERHUB_USERNAME }}/pk:latest
-      - name: docker build & push
-        run: |
-              docker build -f Dockerfile -t ${{ secrets.DOCKERHUB_USERNAME }}/pk:latest .
-              docker push ${{ secrets.DOCKERHUB_USERNAME }}/pk:latest
+     # - name: docker build & push
+      #  run: |
+       #       docker build -f Dockerfile -t ${{ secrets.DOCKERHUB_USERNAME }}/pk:latest .
+        #      docker push ${{ secrets.DOCKERHUB_USERNAME }}/pk:latest
       - name: Checkout repo
         uses: actions/checkout@v3
       - name: Configure AWS credentials
