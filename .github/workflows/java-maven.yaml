@@ -40,5 +40,5 @@ jobs:
          # tags: ${{ secrets.DOCKERHUB_USERNAME }}/pk:latest
       - name: docker build & push
         run: |
-              docker build -f Dockerfile -t ${{ secrets.DOCKERHUB_USERNAME }}/pk:latest
+              docker build -f Dockerfile -t ${{ secrets.DOCKERHUB_USERNAME }}/pk:latest .
               docker push ${{ secrets.DOCKERHUB_USERNAME }}/pk:latest
