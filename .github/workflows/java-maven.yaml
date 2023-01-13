@@ -13,6 +13,9 @@ env:
 jobs:
   java-maven:
     runs-on: ubuntu-latest
+    permissions:
+     id-token: write
+     contents: read
     steps:
       - uses: actions/checkout@v2
       - name: install java
@@ -48,4 +51,4 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v1 # More information on this action can be found below in the 'AWS Credentials' section
         with:
           role-to-assume: arn:aws:iam::989189644101:instance-profile/github_actions
-          aws-region: aws-region-1
+          aws-region: us-east-1
