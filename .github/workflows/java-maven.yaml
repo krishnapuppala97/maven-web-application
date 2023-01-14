@@ -46,9 +46,9 @@ jobs:
        #       docker build -f Dockerfile -t ${{ secrets.DOCKERHUB_USERNAME }}/pk:latest .
         #      docker push ${{ secrets.DOCKERHUB_USERNAME }}/pk:latest
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
       - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v1 # More information on this action can be found below in the 'AWS Credentials' section
+        uses: aws-actions/configure-aws-credentials@master # More information on this action can be found below in the 'AWS Credentials' section
         with:
           role-to-assume: arn:aws:iam::989189644101:role/github_actions
           aws-region: us-east-1
