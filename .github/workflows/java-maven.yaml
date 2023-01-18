@@ -80,7 +80,9 @@ jobs:
           version: 'v1.24.0'
         id: install
       - name: aws eks configure
-        run: aws eks update-kubeconfig --name devopsthehardway-cluster --region us-east-1
-      - name: create pods
         run: |
-               kubectl apply -f eksdeployment.yml
+              aws eks update-kubeconfig --name devopsthehardway-cluster --region us-east-1
+              kubectl apply -f eksdeployment.yml
+      # - name: create pods
+        # run: |
+          #     kubectl apply -f eksdeployment.yml
