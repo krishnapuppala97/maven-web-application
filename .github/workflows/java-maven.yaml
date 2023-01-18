@@ -84,4 +84,3 @@ jobs:
       - name: create pods
         run: |
                kubectl apply -f eksdeployment.yml
-               kubectl get pods -all
