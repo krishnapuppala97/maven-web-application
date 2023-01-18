@@ -79,3 +79,5 @@ jobs:
         with:
           version: 'v1.24.0'
         id: install
+      - name: aws configure
+        run: aws eks update-kubeconfig --name devopsthehardway-cluster --region us-east-1
