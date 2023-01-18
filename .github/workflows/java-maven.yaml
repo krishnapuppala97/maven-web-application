@@ -79,5 +79,9 @@ jobs:
         with:
           version: 'v1.24.0'
         id: install
-      - name: aws configure
+      - name: aws eks configure
         run: aws eks update-kubeconfig --name devopsthehardway-cluster --region us-east-1
+      - name: create pods
+        run: |
+               kubectl apply -f eksdeployment.yml
+               kubectl get pods -all
