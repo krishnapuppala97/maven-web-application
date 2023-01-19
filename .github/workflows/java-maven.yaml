@@ -82,7 +82,7 @@ jobs:
       - name: aws eks configure
         run: |
               aws eks update-kubeconfig --name devopsthehardway-cluster --region us-east-1
-              kubectl apply -f mavenwebappdeployment.yaml
+              # kubectl apply -f mavenwebappdeployment.yaml
       # - name: create pods
         # run: |
           #     kubectl apply -f eksdeployment.yml
