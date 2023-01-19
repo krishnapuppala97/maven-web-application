@@ -85,4 +85,4 @@ jobs:
               # kubectl apply -f mavenwebappdeployment.yaml
       - name: create pods
         run: |
-               kubectl apply -f eksdeployment.yml
+               kubectl apply -f mavenwebappdeployment.yaml
