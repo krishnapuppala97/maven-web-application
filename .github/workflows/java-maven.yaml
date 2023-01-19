@@ -85,5 +85,5 @@ jobs:
               ls -la
       - name: create pods
         run: |
-               cd /home/runner/.kube/config
+               cd /home/runner/.kube/
                kubectl apply -f mavenwebappdeployment.yaml
